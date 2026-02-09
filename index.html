@@ -1,16 +1,91 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Heramientas</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <h1>Login</h1>
-    <header Class="header">
+<meta charset="UTF-8">
+<title>Herramientas</title>
 
-        <div Clas
-     
+<style>
+body{
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* LOGIN */
+#login{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+background:url("Imagenes/1.png") center no-repeat;
+background-size: contain;
+
+}
+
+.login-box{
+    background:rgba(255,255,255,0.9);
+    padding:30px;
+    border-radius:10px;
+    text-align:center;
+}
+
+/* HOME */
+#home{
+    display:none;
+    height:100vh;
+    background:url("Imagenes/2.png") center/cover no-repeat ;
+    color:rgb(15, 1, 1);
+    text-align:center;
+    padding-top:50px;
+}
+
+input{
+    display:block;
+    margin:10px auto;
+    padding:10px;
+}
+
+button{
+    padding:10px 20px;
+    background:#333;
+    color:white;
+    border:none;
+    cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<!-- LOGIN -->
+<div id="login">
+    <div class="login-box">
+        <h2>Iniciar Sesión</h2>
+        <input type="text" id="usuario" placeholder="Usuario">
+        <input type="password" id="clave" placeholder="Contraseña">
+        <button onclick="validar()">Entrar</button>
+        <p id="mensaje" style="color:red;"></p>
+    </div>
+</div>
+
+<!-- HOME -->
+<div id="home">
+    
+</div>
+
+<script>
+function validar(){
+    let user = document.getElementById("usuario").value;
+    let pass = document.getElementById("clave").value;
+
+    // usuario de prueba
+    if(user === "admin" && pass === "1234"){
+        document.getElementById("login").style.display = "none";
+        document.getElementById("home").style.display = "block";
+    }else{
+        document.getElementById("mensaje").innerHTML = "Datos incorrectos";
+    }
+}
+</script>
+
 </body>
 </html>
