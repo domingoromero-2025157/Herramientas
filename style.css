@@ -1,0 +1,169 @@
+:root{
+    --rojo:#d62828;
+    --naranja:#f77f00;
+    --gris:#343a40;
+    --claro:#f8f9fa;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:var(--claro);
+}
+
+/* NAVBAR */
+header{
+    background:var(--gris);
+    color:white;
+    padding:15px 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:22px;
+    font-weight:bold;
+}
+
+.logo span{
+    color:var(--naranja);
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:var(--naranja);
+}
+
+/* HERO */
+.hero{
+    background:url("Imagenes/1.png") center/cover no-repeat;
+    height:90vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+    padding:20px;
+}
+
+.hero-content{
+    background:rgba(0,0,0,0.6);
+    padding:40px;
+    border-radius:10px;
+}
+
+.hero h1{
+    font-size:40px;
+}
+
+.hero span{
+    color:var(--naranja);
+}
+
+.btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:12px 25px;
+    background:var(--rojo);
+    color:white;
+    text-decoration:none;
+    border-radius:5px;
+    font-weight:bold;
+}
+
+.btn:hover{
+    background:var(--naranja);
+}
+
+/* PRODUCTOS */
+.section{
+    padding:60px 40px;
+    text-align:center;
+}
+
+.section h2{
+    font-size:32px;
+    margin-bottom:40px;
+}
+
+.section span{
+    color:var(--rojo);
+}
+
+.productos{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.card i{
+    font-size:40px;
+    color:var(--rojo);
+    margin-bottom:15px;
+}
+
+.card h3{
+    margin-bottom:10px;
+}
+
+.precio{
+    font-size:20px;
+    color:var(--naranja);
+    font-weight:bold;
+    margin:10px 0;
+}
+
+/* CONTACTO */
+.contacto{
+    background:var(--gris);
+    color:white;
+    padding:40px;
+    text-align:center;
+}
+
+footer{
+    background:black;
+    color:white;
+    text-align:center;
+    padding:15px;
+    font-size:14px;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+    header{
+        flex-direction:column;
+    }
+
+    nav{
+        margin-top:10px;
+    }
+
+    .hero h1{
+        font-size:28px;
+    }
+}
