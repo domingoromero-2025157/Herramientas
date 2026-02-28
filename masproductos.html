@@ -21,43 +21,137 @@
 
     <div class="productos">
 
-        <div class="card">
-            <h3>Producto 4</h3>
-            <p class="precio">$25</p>
-            <div class="detalle">
-                <p>Descripción del producto 4.</p>
-                <button class="btn-comprar">Comprar</button>
-            </div>
-        </div>
+<div class="card">
+    <img src="Imagenes/sierra.png" alt="Sierra Manual Profesional" class="img-producto">
 
-        <div class="card">
-            <h3>Producto 5</h3>
-            <p class="precio">$30</p>
-            <div class="detalle">
-                <p>Descripción del producto 5.</p>
-                <button class="btn-comprar">Comprar</button>
-            </div>
-        </div>
+    <h3>Sierra Manual Profesional</h3>
+    <p class="precio">$25</p>
 
-        <div class="card">
-            <h3>Producto 6</h3>
-            <p class="precio">$40</p>
-            <div class="detalle">
-                <p>Descripción del producto 6.</p>
-                <button class="btn-comprar">Comprar</button>
-            </div>
-        </div>
-
-        <div class="card">
-            <h3>Producto 7</h3>
-            <p class="precio">$50</p>
-            <div class="detalle">
-                <p>Descripción del producto 7.</p>
-                <button class="btn-comprar">Comprar</button>
-            </div>
-        </div>
-
+    <div class="detalle">
+        <p>Sierra de acero templado con mango ergonómico.</p>
+        <button class="btn-comprar" onclick="abrirModal()">Comprar</button>
     </div>
+</div>
+
+
+<!-- MODAL -->
+<div id="modal" class="modal">
+    <div class="modal-contenido">
+        <span class="cerrar" onclick="cerrarModal()">&times;</span>
+
+        <h2>Sierra Manual Profesional</h2>
+        <img src="Imagenes/sierra.png" class="img-modal">
+
+        <p><strong>Precio:</strong> $25</p>
+        <p><strong>Material:</strong> Acero templado de alta resistencia</p>
+        <p><strong>Uso:</strong> Cortes precisos en madera y plástico</p>
+        <p><strong>Garantía:</strong> 1 año</p>
+
+        <a href="confirmacion.html" class="btn-comprar">Confirmar Compra</a>
+    </div>
+</div>
+<script>
+function abrirModal(){
+    document.getElementById("modal").style.display = "flex";
+}
+
+function cerrarModal(){
+    document.getElementById("modal").style.display = "none";
+}
+</script>
+
+<div class="card">
+        <img src="Imagenes/Caja.png" alt="Caja de Herramientas Metálica" class="img-producto">
+
+    <h3>Caja de Herramientas Metálica</h3>
+    <p class="precio">$30</p>
+    <div class="detalle">
+        <p>Caja resistente con compartimentos internos para organizar herramientas y accesorios.</p>
+        <button class="btn-comprar">Comprar</button>
+    </div>
+</div>
+
+<div class="card">
+        <img src="Imagenes/Esmeriladora.png" alt="Esmeriladora Eléctrica Industrial" class="img-producto">
+    <h3>Esmeriladora Eléctrica Industrial</h3>
+    <p class="precio">$40</p>
+    <div class="detalle">
+        <p>Esmeril potente para cortar y pulir metal. Incluye protector de seguridad.</p>
+        <button class="btn-comprar">Comprar</button>
+    </div>
+</div>
+
+<div class="card">
+    <img src="Imagenes/kitDeBroncas.png" alt="Kit de Brocas Multiuso" class="img-producto">
+    <h3>Kit de Brocas Multiuso</h3>
+    <p class="precio">$50</p>
+    <div class="detalle">
+        <p>Juego completo de brocas para madera, metal y concreto.</p>
+        <button class="btn-comprar">Comprar</button>
+    </div>
+</div>
+
+<div class="card">
+      <img src="Imagenes/Llave Ajustable Profesional.png" alt="Llave Ajustable Profesional" class="img-producto">
+    <h3>Llave Ajustable Profesional</h3>
+    <p class="precio">$28</p>
+    <div class="detalle">
+        <p>Llave ajustable de acero reforzado para trabajos mecánicos.</p>
+        <button class="btn-comprar">Comprar</button>
+    </div>
+</div>
+
+<div class="card">
+          <img src="Imagenes/Juego de Alicates.png" alt="Juego de Alicates" class="img-producto">
+    <h3>Juego de Alicates</h3>
+    <p class="precio">$35</p>
+    <div class="detalle">
+        <p>Set de alicates de corte y presión con mango antideslizante.</p>
+        <button class="btn-comprar">Comprar</button>
+    </div>
+</div>
+
+<div class="card">
+              <img src="Imagenes/Martillo de Carpintero.png" alt="Martillo de Carpintero" class="img-producto">
+    <h3>Martillo de Carpintero</h3>
+    <p class="precio">$18</p>
+    <div class="detalle">
+        <p>Martillo con cabeza de acero y mango ergonómico resistente.</p>
+        <button class="btn-comprar">Comprar</button>
+    </div>
+</div>
+
+<div class="card">
+    <img src="Imagenes/Taladro Inalámbrico.png" alt="Taladro Inalámbrico" class="img-producto">
+    <h3>Taladro Inalámbrico</h3>
+    <p class="precio">$65</p>
+    <div class="detalle">
+        <p>Taladro recargable con batería de larga duración y velocidad variable.</p>
+        <button class="btn-comprar">Comprar</button>
+    </div>
+</div>
+
+<div class="card">
+    <img src="Imagenes/Cinta Métrica 5m.png" alt="Cinta Métrica 5m" class="img-producto">
+    <h3>Cinta Métrica 5m</h3>
+    <p class="precio">$12</p>
+    <div class="detalle">
+        <p>Cinta métrica retráctil con seguro y medición precisa.</p>
+        <button class="btn-comprar">Comprar</button>
+    </div>
+</div>
+
+<div class="card">
+    <img src="Imagenes/Nivel de Burbuja.png" alt="Nivel de Burbuja" class="img-producto">
+    <h3>Nivel de Burbuja</h3>
+    <p class="precio">$20</p>
+    <div class="detalle">
+        <p>Nivel de aluminio con indicadores de precisión para construcción.</p>
+        <button class="btn-comprar">Comprar</button>
+    </div>
+</div>
+    </div>
+
 </section>
 
 <footer>
