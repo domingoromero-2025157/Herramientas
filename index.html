@@ -2,90 +2,81 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<title>Herramientas</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FerreMax | Todo en Herramientas</title>
 
-<style>
-body{
-    margin:0;
-    font-family: Arial, Helvetica, sans-serif;
-}
+<link rel="stylesheet" href="style.css">
 
-/* LOGIN */
-#login{
-    height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-background:url("Imagenes/1.png") center no-repeat;
-background-size: contain;
-
-}
-
-.login-box{
-    background:rgba(255,255,255,0.9);
-    padding:30px;
-    border-radius:10px;
-    text-align:center;
-}
-
-/* HOME */
-#home{
-    display:none;
-    height:100vh;
-    background:url("Imagenes/2.png") center/cover no-repeat ;
-    color:rgb(15, 1, 1);
-    text-align:center;
-    padding-top:50px;
-}
-
-input{
-    display:block;
-    margin:10px auto;
-    padding:10px;
-}
-
-button{
-    padding:10px 20px;
-    background:#333;
-    color:white;
-    border:none;
-    cursor:pointer;
-}
-</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
 
-<!-- LOGIN -->
-<div id="login">
-    <div class="login-box">
-        <h2>Iniciar Sesión</h2>
-        <input type="text" id="usuario" placeholder="Usuario">
-        <input type="password" id="clave" placeholder="Contraseña">
-        <button onclick="validar()">Entrar</button>
-        <p id="mensaje" style="color:red;"></p>
+<header>
+    <div class="logo">
+        <i class="fas fa-tools"></i> FERRE<span>MAX</span>
     </div>
-</div>
+    <nav>
+        <a href="#">Inicio</a>
+        <a href="#productos">Productos</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+</header>
 
-<!-- HOME -->
-<div id="home">
-    
-</div>
+<section class="hero">
+    <div class="hero-content">
+        <h1>LAS MEJORES <span>HERRAMIENTAS</span></h1>
+        <p>Todo lo que necesitas para construcción, carpintería y hogar.</p>
+        <a href="#productos" class="btn">Ver Productos</a>
+    </div>
+</section>
 
-<script>
-function validar(){
-    let user = document.getElementById("usuario").value;
-    let pass = document.getElementById("clave").value;
+<section class="section" id="productos">
+    <h2>NUESTROS <span>PRODUCTOS</span></h2>
 
-    // usuario de prueba
-    if(user === "admin" && pass === "1234"){
-        document.getElementById("login").style.display = "none";
-        document.getElementById("home").style.display = "block";
-    }else{
-        document.getElementById("mensaje").innerHTML = "Datos incorrectos";
-    }
-}
-</script>
+    <div class="productos">
+
+        <div class="card">
+            <i class="fas fa-hammer"></i>
+            <h3>Martillo Profesional</h3>
+            <p>Alta resistencia para trabajos pesados.</p>
+            <div class="precio">$15.99</div>
+        </div>
+
+        <div class="card">
+            <i class="fas fa-screwdriver"></i>
+            <h3>Taladro Eléctrico</h3>
+            <p>Potente y eficiente para cualquier proyecto.</p>
+            <div class="precio">$89.99</div>
+        </div>
+
+        <div class="card">
+            <i class="fas fa-toolbox"></i>
+            <h3>Caja de Herramientas</h3>
+            <p>Organiza todo tu equipo fácilmente.</p>
+            <div class="precio">$39.99</div>
+        </div>
+
+        <div class="card">
+            <i class="fas fa-bolt"></i>
+            <h3>Kit Eléctrico</h3>
+            <p>Ideal para instalaciones y mantenimiento.</p>
+            <div class="precio">$59.99</div>
+        </div>
+
+    </div>
+</section>
+
+<section class="contacto" id="contacto">
+    <h2>CONTÁCTANOS</h2>
+    <p>📍 Zona 1, Ciudad de Guatemala</p>
+    <p>📞 +502 5555-5555</p>
+    <p>📧 contacto@ferremax.com</p>
+</section>
+
+<footer>
+    © 2026 FerreMax - Todos los derechos reservados
+</footer>
 
 </body>
 </html>
