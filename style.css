@@ -1,3 +1,10 @@
+.card img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+    border-radius:10px;
+    margin-bottom:15px;
+}
 :root{
     --rojo:#d62828;
     --naranja:#f77f00;
@@ -12,11 +19,12 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+/* ===== BODY PRINCIPAL ===== */
 body{
     background:var(--claro);
 }
 
-/* NAVBAR */
+/* ===== NAVBAR ===== */
 header{
     background:var(--gris);
     color:white;
@@ -40,15 +48,16 @@ nav a{
     text-decoration:none;
     margin-left:20px;
     font-weight:bold;
+    transition:0.3s;
 }
 
 nav a:hover{
     color:var(--naranja);
 }
 
-/* HERO */
+/* ===== HERO ===== */
 .hero{
-    background:url("Imagenes/1.png") center/cover no-repeat;
+    background:url("Imagenes/Home.png") center/cover no-repeat;
     height:90vh;
     display:flex;
     justify-content:center;
@@ -81,13 +90,14 @@ nav a:hover{
     text-decoration:none;
     border-radius:5px;
     font-weight:bold;
+    transition:0.3s;
 }
 
 .btn:hover{
     background:var(--naranja);
 }
 
-/* PRODUCTOS */
+/* ===== SECCIONES ===== */
 .section{
     padding:60px 40px;
     text-align:center;
@@ -102,28 +112,26 @@ nav a:hover{
     color:var(--rojo);
 }
 
+/* ===== PRODUCTOS ===== */
 .productos{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
     gap:25px;
 }
 
+/* ===== TARJETAS ===== */
 .card{
     background:white;
     padding:20px;
     border-radius:10px;
     box-shadow:0 5px 15px rgba(0,0,0,0.1);
-    transition:0.3s;
+    transition:0.3s ease;
+    text-align:center;
 }
 
 .card:hover{
     transform:translateY(-5px);
-}
-
-.card i{
-    font-size:40px;
-    color:var(--rojo);
-    margin-bottom:15px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.15);
 }
 
 .card h3{
@@ -137,7 +145,26 @@ nav a:hover{
     margin:10px 0;
 }
 
-/* CONTACTO */
+.detalle{
+    font-size:14px;
+    margin-bottom:10px;
+}
+
+.btn-comprar{
+    padding:8px 15px;
+    border:none;
+    background:var(--rojo);
+    color:white;
+    cursor:pointer;
+    border-radius:5px;
+    transition:0.3s;
+}
+
+.btn-comprar:hover{
+    background:var(--naranja);
+}
+
+/* ===== CONTACTO ===== */
 .contacto{
     background:var(--gris);
     color:white;
@@ -153,7 +180,7 @@ footer{
     font-size:14px;
 }
 
-/* RESPONSIVE */
+/* ===== RESPONSIVE ===== */
 @media(max-width:768px){
     header{
         flex-direction:column;
@@ -166,4 +193,21 @@ footer{
     .hero h1{
         font-size:28px;
     }
+}
+
+/* ===================================== */
+/* ===== ESTILOS SOLO MAS PRODUCTOS ===== */
+/* ===================================== */
+
+.pagina-secundaria{
+    background:#eef2f7;
+}
+
+.pagina-secundaria .card{
+    border:2px solid var(--naranja);
+    border-radius:15px;
+}
+
+.pagina-secundaria .card:hover{
+    transform:scale(1.05);
 }
