@@ -1,17 +1,12 @@
-.card img{
-    width: 75p;
-    height:180px;
-    object-fit:cover;
-    border-radius:10px;
-    margin-bottom:15px;
-}
 :root{
-    --rojo:#000000;
-    --naranja:#000000;
-    --gris:#42678b;
+    --rojo:#85120e;
+    --naranja:#b9712d;
+    --gris:#2b3a49;
     --claro:#f8f9fa;
+    --oscuro:#171717;
 }
 
+/* RESET */
 *{
     margin:0;
     padding:0;
@@ -19,12 +14,12 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-/* ===== BODY PRINCIPAL ===== */
 body{
     background:var(--claro);
 }
 
-/* ===== NAVBAR ===== */
+/* ================= NAVBAR ================= */
+
 header{
     background:var(--gris);
     color:white;
@@ -55,26 +50,28 @@ nav a:hover{
     color:var(--naranja);
 }
 
-/* ===== HERO ===== */
+/* ================= HERO ================= */
+
 .hero{
     background:url("Imagenes/Home.png") center/cover no-repeat;
     height:90vh;
     display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
+    justify-content:flex-start;
+    align-items:flex-start;
     color:white;
-    padding:20px;
+    padding:60px;
 }
 
 .hero-content{
     background:rgba(0,0,0,0.6);
     padding:40px;
     border-radius:10px;
+    max-width:500px;
 }
 
 .hero h1{
     font-size:40px;
+    margin-bottom:15px;
 }
 
 .hero span{
@@ -83,7 +80,7 @@ nav a:hover{
 
 .btn{
     display:inline-block;
-    margin-top:20px;
+    margin-top:15px;
     padding:12px 25px;
     background:var(--rojo);
     color:white;
@@ -96,8 +93,35 @@ nav a:hover{
 .btn:hover{
     background:var(--naranja);
 }
+/* ================= BANNER SECUNDARIO ================= */
 
-/* ===== SECCIONES ===== */
+.banner-secundario{
+    background:url("Imagenes/Fondo2.png") center/cover no-repeat;
+    height:60vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position:relative;
+}
+
+.banner-secundario::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.5);
+}
+
+.contenido-banner{
+    position:relative;
+    color:white;
+    text-align:center;
+    font-size:28px;
+}
+/* ================= SECCIONES ================= */
+
 .section{
     padding:60px 40px;
     text-align:center;
@@ -112,16 +136,18 @@ nav a:hover{
     color:var(--rojo);
 }
 
-/* ===== PRODUCTOS ===== */
+/* ================= PRODUCTOS ================= */
+
 .productos{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
     gap:25px;
 }
 
-/* ===== TARJETAS ===== */
+/* ================= TARJETAS ================= */
+
 .card{
-    background:rgb(82, 77, 77);
+    background:white;
     padding:20px;
     border-radius:10px;
     box-shadow:0 5px 15px rgba(0,0,0,0.1);
@@ -131,7 +157,15 @@ nav a:hover{
 
 .card:hover{
     transform:translateY(-5px);
-    box-shadow:0 8px 20px rgba(0,0,0,0.15);
+    box-shadow:0 8px 20px rgba(0,0,0,0.2);
+}
+
+.card img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+    border-radius:10px;
+    margin-bottom:15px;
 }
 
 .card h3{
@@ -147,24 +181,26 @@ nav a:hover{
 
 .detalle{
     font-size:14px;
-    margin-bottom:10px;
+    margin-bottom:15px;
 }
 
 .btn-comprar{
-    padding:8px 15px;
+    padding:10px 20px;
     border:none;
     background:var(--rojo);
     color:white;
     cursor:pointer;
     border-radius:5px;
     transition:0.3s;
+    font-weight:bold;
 }
 
 .btn-comprar:hover{
     background:var(--naranja);
 }
 
-/* ===== CONTACTO ===== */
+/* ================= CONTACTO ================= */
+
 .contacto{
     background:var(--gris);
     color:white;
@@ -180,38 +216,8 @@ footer{
     font-size:14px;
 }
 
-/* ===== RESPONSIVE ===== */
-@media(max-width:768px){
-    header{
-        flex-direction:column;
-    }
+/* ================= MODAL ================= */
 
-    nav{
-        margin-top:10px;
-    }
-
-    .hero h1{
-        font-size:28px;
-    }
-}
-
-/* ===================================== */
-/* ===== ESTILOS SOLO MAS PRODUCTOS ===== */
-/* ===================================== */
-
-.pagina-secundaria{
-    background:#eef2f7;
-}
-
-.pagina-secundaria .card{
-    border:2px solid var(--naranja);
-    border-radius:15px;
-}
-
-.pagina-secundaria .card:hover{
-    transform:scale(1.05);
-}
-/* MODAL FONDO */
 .modal{
     display:none;
     position:fixed;
@@ -225,18 +231,16 @@ footer{
     align-items:center;
 }
 
-/* CUADRO GRANDE */
 .modal-contenido{
-    background:#fff;
-    padding:30px;
+    background:#bdb8b8;
+    padding:50px;
     width:400px;
-    border-radius:15px;
+    border-radius:50px;
     text-align:center;
     position:relative;
-    animation:aparecer 0.3s ease;
+    animation:aparecer 1s ease;
 }
 
-/* Imagen del modal */
 .img-modal{
     width:100%;
     height:200px;
@@ -245,7 +249,6 @@ footer{
     margin:15px 0;
 }
 
-/* Botón cerrar */
 .cerrar{
     position:absolute;
     top:10px;
@@ -254,8 +257,38 @@ footer{
     cursor:pointer;
 }
 
-/* Animación */
 @keyframes aparecer{
     from{transform:scale(0.8); opacity:0;}
     to{transform:scale(1); opacity:1;}
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:768px){
+
+    header{
+        flex-direction:column;
+    }
+
+    nav{
+        margin-top:10px;
+    }
+
+    .hero{
+        padding:30px;
+        height:70vh;
+    }
+
+    .hero h1{
+        font-size:28px;
+    }
+
+}
+
+.fondo-secundaria {
+    background-image: url("Imagenes/Home.png    "); /* Ruta de la imagen de fondo */
+    background-size: cover;       /* Ajusta la imagen a toda la pantalla */
+    background-position: center;  /* Centra la imagen */
+    background-repeat: no-repeat; /* No se repite */
+    background-attachment: fixed; /* Efecto tipo fijo */
 }
