@@ -6,6 +6,9 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<body class="fondo-secundaria"></body>
+
+
 
 <header>
     <div class="logo">Mi<span>Tienda</span></div>
@@ -16,10 +19,20 @@
     </nav>
 </header>
 
+
+
+
+
 <section class="section">
     <h2>Más <span>Productos</span></h2>
 
     <div class="productos">
+
+
+
+
+
+
 
 <div class="card">
     <img src="Imagenes/sierra.png" alt="Sierra Manual Profesional" class="img-producto">
@@ -46,10 +59,15 @@
         <p><strong>Material:</strong> Acero templado de alta resistencia</p>
         <p><strong>Uso:</strong> Cortes precisos en madera y plástico</p>
         <p><strong>Garantía:</strong> 1 año</p>
+        <p><strong>Calificación:</strong> 4.5/5 estrellas basado en 200 reseñas</p>
 
-        <a href="confirmacion.html" class="btn-comprar">Confirmar Compra</a>
+
+
+        <a href="confirmacion.html" class="btn-comprar"> Confirmar Compra</a>
     </div>
 </div>
+
+
 <script>
 function abrirModal(){
     document.getElementById("modal").style.display = "flex";
@@ -60,6 +78,15 @@ function cerrarModal(){
 }
 </script>
 
+
+
+
+
+
+
+
+
+
 <div class="card">
         <img src="Imagenes/Caja.png" alt="Caja de Herramientas Metálica" class="img-producto">
 
@@ -67,9 +94,48 @@ function cerrarModal(){
     <p class="precio">$30</p>
     <div class="detalle">
         <p>Caja resistente con compartimentos internos para organizar herramientas y accesorios.</p>
-        <button class="btn-comprar">Comprar</button>
+       
+<button class="btn-comprar" onclick="abrirModalCaja()">Comprar</button>
     </div>
 </div>
+
+
+<!-- MODAL -->
+<div id="modalCaja" class="modal">
+    <div class="modal-contenido">
+<span class="cerrar" onclick="cerrarModalCaja()">&times;</span>
+        <h2>Caja de Herramientas Metálica</h2>
+        <img src="Imagenes/Caja.png" class="img-modal">
+
+        <p><strong>Precio:</strong> $30</p>
+        <p><strong>Material:</strong> Acero resistente con acabado anti-corrosión</p>
+        <p><strong>Uso:</strong> Organización de herramientas en taller o obra</p>
+        <p><strong>Garantía:</strong> 2 años</p>
+        <p><strong>Calificación:</strong> 4.5/5 estrellas basado en 200 reseñas</p>
+
+
+
+        <a href="confirmacion.html" class="btn-comprar"> Confirmar Compra</a>
+    </div>
+</div>
+
+
+<script>
+function abrirModalCaja(){
+    document.getElementById("modalCaja").style.display = "flex";
+}
+
+function cerrarModalCaja(){
+    document.getElementById("modalCaja").style.display = "none";
+}
+</script>
+
+
+
+
+
+
+
 
 <div class="card">
         <img src="Imagenes/Esmeriladora.png" alt="Esmeriladora Eléctrica Industrial" class="img-producto">
@@ -77,9 +143,48 @@ function cerrarModal(){
     <p class="precio">$40</p>
     <div class="detalle">
         <p>Esmeril potente para cortar y pulir metal. Incluye protector de seguridad.</p>
-        <button class="btn-comprar">Comprar</button>
+  <button class="btn-comprar" onclick="abrirModalEsmeriladora()">Comprar</button>
     </div>
 </div>
+
+
+<!-- MODAL -->
+<div id="modalEsmeriladora" class="modal">
+    <div class="modal-contenido">
+<span class="cerrar" onclick="cerrarModalEsmeriladora()">&times;</span>
+        <h2>Esmeriladora Eléctrica Industrial</h2>
+        <img src="Imagenes/Esmeriladora.png" class="img-modal">
+
+        <p><strong>Precio:</strong> $40</p>
+        <p><strong>Material:</strong> Acero resistente con acabado anti-corrosión</p>
+        <p><strong>Uso:</strong> Cortes y pulido de metal</p>
+        <p><strong>Garantía:</strong> 2 años</p>
+        <p><strong>Calificación:</strong> 4.5/5 estrellas basado en 200 reseñas</p>
+
+
+
+        <a href="confirmacion.html" class="btn-comprar"> Confirmar Compra</a>
+    </div>
+</div>
+
+
+<script>
+function abrirModalEsmeriladora(){
+    document.getElementById("modalEsmeriladora").style.display = "flex";
+}
+
+function cerrarModalEsmeriladora(){
+    document.getElementById("modalEsmeriladora").style.display = "none";
+}
+</script>
+
+
+
+
+
+
+
+
 
 <div class="card">
     <img src="Imagenes/kitDeBroncas.png" alt="Kit de Brocas Multiuso" class="img-producto">
